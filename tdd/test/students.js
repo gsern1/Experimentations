@@ -10,6 +10,11 @@ describe('students', () => {
     it('should allow me to create a student', () => {
       const student = new Student('guillaume', 'serneels');
       student.should.not.equal(undefined);
+    });
+  });
+  describe('greet', () => {
+    it('should return the correct greetings', () => {
+      const student = new Student('guillaume', 'serneels');
       const greeting = student.greet();
       greeting.should.equal('hello guillaume');
     });

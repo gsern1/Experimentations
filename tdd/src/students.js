@@ -1,11 +1,12 @@
-function Student(firstName, lastName) {
-  this.firstName = firstName;
-  this.lastName = lastName;
+class Student {
+  constructor(firstName, lastName) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+  }
+  greet() {
+    return `hello ${this.firstName}`;
+  }
 }
-
-Student.prototype.greet = function greet() {
-  return 'hello ' + this.firstName;
-};
 
 exports.Student = Student;
 
