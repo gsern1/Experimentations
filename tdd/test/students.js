@@ -1,15 +1,13 @@
-const chai = require('chai');
+require('./chai-config');
 const students = require('../src/students.js');
 
 const { Student } = students;
-
-chai.should();
 
 describe('students', () => {
   describe('Student', () => {
     it('should allow me to create a student', () => {
       const student = new Student('guillaume', 'serneels');
-      student.should.not.equal(undefined);
+      student.should.not.be.undefined();
     });
   });
   describe('greet', () => {
