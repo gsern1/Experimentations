@@ -1,2 +1,4 @@
-var msg = "hello tb";
-console.log(msg);
+$(function() {
+    console.log( "ready!" );
+    $('h2').removeClass();
+});
