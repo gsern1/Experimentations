@@ -1,16 +1,18 @@
 {
-  "name": "server",
+  "name": "tdd",
   "version": "1.0.0",
-  "description": "experimentations",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Guillaume Serneels",
+  "author": "",
   "license": "ISC",
   "devDependencies": {
+    "chai": "^4.1.2",
     "eslint": "^4.18.0",
     "eslint-config-airbnb-base": "^12.1.0",
-    "eslint-plugin-import": "^2.8.0"
+    "eslint-plugin-import": "^2.8.0",
+    "mocha": "^5.0.1"
   }
 }
