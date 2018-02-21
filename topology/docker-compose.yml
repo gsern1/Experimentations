@@ -1,0 +1,29 @@
+version: '2'
+
+services:
+  elasticsearch:
+    build: ../images/elasticsearch
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    environment:
+      ES_JAVA_OPTS: "-Xms1g -Xmx1g"
+  kibana:
+    build: ../images/kibana
+    ports:
+      - "5601:5601"
+    depends_on:
+      - elasticsearch
+  backend-api:
+    build: ../images/backend-api
+    ports:
+      - "3000:3000"
+    depends_on:
+      - elasticsearch    
+  frontend-d3:
+    build: ../images/frontend-d3
+    ports:
+      - "80:80"
+    depends_on:
+      - backend-api      
+      
