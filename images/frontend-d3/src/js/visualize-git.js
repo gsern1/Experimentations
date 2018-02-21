@@ -3,7 +3,7 @@
 
     function loadData(cb) {
         console.log("Loading data via REST API");
-        d3.json("localhost:3000", cb);
+        d3.json("http://localhost:3000", cb);
     }
 
     function doSequenceOfTasks(tasksAreDone) {
